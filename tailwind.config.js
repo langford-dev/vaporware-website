@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#1d95ff",
-        secondary: "#ff19d8",
+        brand: "#5E17EB",
+        secondary: "#b0f",
       },
     },
     screens: {
