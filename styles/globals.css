@@ -23,6 +23,10 @@ body {
   font-weight: 600;
 }
 
+div .scroll-icon {
+  cursor: none;
+}
+
 a,
 button {
   color: inherit;
@@ -39,35 +43,30 @@ button {
 }
 
 .hero-h1-gradient {
-  /* background: linear-gradient(to left, var(--primary), var(--secondary));
+  animation: flow 2s ease-in-out infinite;
+  background: linear-gradient(-60deg, #ff0048, var(--primary), #ff0048);
+  background-size: 300%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-
-  background: linear-gradient(
-    to right,
-    #d09c00 30%,
-    var(--primary) 40%,
-    var(--primary) 60%,
-    red 70%
-  );
-
-  background-size: 200% auto;
-  color: #000;
   background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: swipe 1.5s linear infinite;
+
+  /* -webkit-text-stroke: 2px #fff;
+  text-stroke: 4px #fff; */
 }
 
-@keyframes swipe {
-  to {
-    background-position: 200% center;
+@keyframes flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 .Typewriter__wrapper {
-  /* color: var(--primary); */
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -107,11 +106,6 @@ img.next-image {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* border: 1px solid #ffffff44; */
-  /* border-radius: 9999px; */
-  /* padding: 10px;
-  padding-top: 15px;
-  padding-left: 15px; */
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;

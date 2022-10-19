@@ -3,19 +3,29 @@ const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
   useEffect(() => {
-    // window.onload = function () {
-    //   Calendly.initBadgeWidget({
-    //     url: "https://calendly.com/vapourwareco/one-on-one-meetup",
-    //     text: "schedule meeting",
-    //     color: "#0069ff",
-    //     textColor: "#ffffff",
-    //     branding: undefined,
-    //   });
-    // };
     const mouseMoveHandler = (event) => {
+      let mouse = document.querySelector(".cursor");
       const { clientX, clientY } = event;
       setMousePosition({ x: clientX, y: clientY });
+      let height = '100vh';
+      let width = window.innerWidth;
+      if (
+        (clientX <= 0 ||
+          clientX >= width) ||
+        (clientY <= 0 ||
+          clientY >= height)
+      ) {
+        mouse.classList.add("hide");
+      } else if ((
+        clientX > 0 ||
+        clientX < width) || (
+          clientY > 0 ||
+          clientY < height)
+      ) {
+        mouse.classList.remove("hide");
+      }
     };
+
     document.addEventListener("mousemove", mouseMoveHandler);
     return () => {
       document.removeEventListener("mousemove", mouseMoveHandler);
