@@ -22,12 +22,19 @@ body {
   cursor: none;
   font-weight: 600;
 }
+div .scroll-icon{
+  cursor:none;
+}
 
 a,
 button {
   color: inherit;
   user-select: none;
   text-decoration: none;
+  cursor: none;
+}
+.hide{
+  display: none;
   cursor: none;
 }
 
