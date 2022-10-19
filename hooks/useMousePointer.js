@@ -7,20 +7,20 @@ const useMousePosition = () => {
       let mouse = document.querySelector(".cursor");
       const { clientX, clientY } = event;
       setMousePosition({ x: clientX, y: clientY });
-      let height =window.innerHeight;
+      let height = '100vh';
       let width = window.innerWidth;
       if (
         (clientX <= 0 ||
-        clientX >= width )||
+          clientX >= width) ||
         (clientY <= 0 ||
-        clientY >= height)
+          clientY >= height)
       ) {
         mouse.classList.add("hide");
       } else if ((
         clientX > 0 ||
-        clientX < width )||(
-        clientY > 0 ||
-        clientY < height)
+        clientX < width) || (
+          clientY > 0 ||
+          clientY < height)
       ) {
         mouse.classList.remove("hide");
       }
@@ -35,4 +35,3 @@ const useMousePosition = () => {
   return mousePosition;
 };
 export default useMousePosition;
-

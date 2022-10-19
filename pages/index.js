@@ -43,7 +43,7 @@ export default function Home() {
       />
       <Flex
         title="Graphic Design"
-        content="We design and print stunning high-quality flyers, business cards, promotional banners, and other graphic materials to help you build an outstading and professional brand identity."
+        content="We design and print stunning high-quality flyers, business cards, promotional banners, and other graphic materials to help you build an outstanding and professional brand identity."
         subtitle="DESIGN &amp; CONTENT"
         imgAlt="image of graphic design"
         img={graphicDesign}

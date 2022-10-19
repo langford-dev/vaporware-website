@@ -32,6 +32,12 @@ const MetaHead = (props) => {
       <meta property="twitter:domain" content={metaContent.url} />
       <meta name="twitter:creator" content={metaContent.twitterCreator} />
       <meta name="twitter:image:alt" content={metaContent.imageAlt} />
+
+      {/* calendly */}
+      {/* <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
+      /> */}
     </Head>
   );
 };

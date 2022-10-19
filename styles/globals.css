@@ -6,8 +6,8 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1d95ff;
-  --secondary: #ff19d8;
+  --primary: #5e17eb;
+  --secondary: #b0f;
   --selection: #4e4e4e70;
   --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
 }
@@ -24,6 +24,10 @@ body {
 }
 div .scroll-icon{
   cursor:none;
+}
+
+div .scroll-icon {
+  cursor: none;
 }
 
 a,
@@ -45,8 +49,31 @@ button {
   scroll-behavior: smooth;
 }
 
+.hero-h1-gradient {
+  animation: flow 2s ease-in-out infinite;
+  background: linear-gradient(-60deg, #ff0048, var(--primary), #ff0048);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* -webkit-text-stroke: 2px #fff;
+  text-stroke: 4px #fff; */
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .Typewriter__wrapper {
-  /* color: var(--primary); */
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -86,11 +113,6 @@ img.next-image {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* border: 1px solid #ffffff44; */
-  /* border-radius: 9999px; */
-  /* padding: 10px;
-  padding-top: 15px;
-  padding-left: 15px; */
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;

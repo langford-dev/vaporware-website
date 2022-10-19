@@ -46,7 +46,7 @@ const About = () => {
 const styles = {
   p: `text-xl leading-8 opacity-80`,
   title: `underline_ lg:text-4xl font-bold`,
-  contentWrapper: `max-w-7xl m-auto p-5 py-20 lg:px-0 font-medium lg:flex justify-evenly`,
+  contentWrapper: `max-w-7xl m-auto p-5 py-20 lg:px-10 font-medium lg:flex justify-evenly`,
 };
 
 export default About;
